@@ -1,0 +1,131 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.14.0",
+	"appid": "wx960a737cef2b7fff",
+	"projectname": "01.%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/cart/cart",
+					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/logs/logs",
+					"pathName": "pages/logs/logs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/selector/selector",
+					"pathName": "pages/selector/selector",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/animation/animation",
+					"pathName": "pages/animation/animation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/view/view",
+					"pathName": "pages/view/view",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/form/form",
+					"pathName": "pages/form/form",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/picker/picker",
+					"pathName": "pages/picker/picker",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/interactive/interactive",
+					"pathName": "pages/interactive/interactive",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/media/media",
+					"pathName": "pages/media/media",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/layout/layout",
+					"pathName": "pages/layout/layout",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/map/map",
+					"pathName": "pages/map/map",
+					"scene": null
+				}
+			]
+		}
+	}
+}

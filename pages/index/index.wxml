@@ -1,0 +1,11 @@
+<!-- index.wxml -->
+<view class="container">
+  <template is="staffName" data="{{...staffA}}"></template>
+  <template is="staffName" data="{{...staffB}}"></template>
+  <template is="staffName" data="{{...staffC}}"></template>
+</view>
+
+<!-- 页面模板 ：好处是可以复用页面 -->
+<template name="staffName">
+  <view>FirstName: {{firstName}}, LastName: {{lastName}}</view>
+</template>

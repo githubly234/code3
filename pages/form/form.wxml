@@ -1,0 +1,63 @@
+<form bindsubmit="submitform">
+  <!-- 1.input
+    微信小程序中的input的type值只有下面四种：
+        text	文本输入键盘	
+        number	数字输入键盘	
+        idcard	身份证输入键盘	
+        digit	带小数点的数字键盘 -->
+  <view>
+    <label for="username">请输入用户名</label>
+    <input type="text" id="username" name="username" placeholder="请输入用户名" maxlength="10" focus="{{true}}" confirm-type="next" bindfocus="focusInput" bindblur="blurInput" bindconfirm="confirmInput" />
+  </view>
+  <view>
+    <label for="password">请输入密码</label>
+    <input type="number" id="password" name="password" password />
+  </view>
+  <view>
+    <label for="digit">请输入</label>
+    <input type="digit" id="digit" name="digit" />
+  </view>
+  <!--2.开关-->
+  <view>
+    <label>开关</label>
+    <switch name="switch" />
+  </view>
+  <!--3.滑块-->
+  <view>
+    <label>滑块</label>
+    <slider name="slider" show-value></slider>
+  </view>
+  <!--4.单选按钮组-->
+  <view>
+    <label>性别</label>
+    <!-- 只要radio发生改变，就会触发genderChange方法 -->
+    <radio-group name="gender" bindchange="genderChange">
+      <radio value="male" checked>男</radio>
+      <radio value="female">女</radio>
+    </radio-group>
+  </view>
+  <!--5.多选按钮组-->
+  <view>
+    <label>兴趣爱好</label>
+    <!-- 只要checkbox发生改变，就会触发hobbyChange方法 -->
+    <checkbox-group name="hobby" bindchange="hobbyChange">
+      <checkbox value="lq">篮球</checkbox>
+      <checkbox value="zq">足球</checkbox>
+    </checkbox-group>
+  </view>
+  <!--6.文本域-->
+  <view>
+    <label>自我介绍</label>
+    <textarea auto-height name="desc" placeholder="请输入自我介绍"></textarea>
+  </view>
+  <!-- 7. button组件 -->
+  <!-- type是用来控制按钮的类型 只有三种：primary default warn -->
+  <button type="primary">这是一个按钮</button>
+  <button type="warn" size="mini" plain loading>这是一个按钮</button>
+  <!-- hover 指的是按下， hover-class指的就是按下过后的作用Class -->
+  <button hover-class="btn-active">hover class</button>
+  <!-- form-type:submit  点击按钮的时候会提交表单
+    form-type:reset  点击按钮的时候会重置表单 -->
+  <button form-type="submit">提交表单</button>
+  <button form-type="reset">重置表单</button>
+</form>

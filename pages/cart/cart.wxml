@@ -1,0 +1,14 @@
+<import src="/pages/index/index.wxml" />
+<!-- import的作用：引入目标文件中定义的template，然后在当前的页面就可以使用template
+  注意点：A import B，所以A可以使用B中定义的template，B 再import C，此时A不可以使用C中定义的template
+
+  <include src="header.wxml"/>  主要是用来做页面包含的，其作用是可以引入目标文件中除了template wxs之外的所有代码 -->
+<include src="/pages/header/header.wxml"></include>
+<text>pages/cart/cart.wxml</text>
+<template is="staffName" data="{{...staffA}}"></template>
+<text class="title">测试</text>
+<view class="box2">
+  <text>1</text>
+  <text>2</text>
+  <text>3</text>
+</view>

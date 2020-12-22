@@ -1,0 +1,6 @@
+<view class="container">
+  <button type="primary" bindtap="btnToast">click me....</button>
+  <button type="primary" bindtap="btnActionSheet">click me....</button>
+  <button type="primary" bindtap="btnModal">click me....</button>
+  <button type="primary" bindtap="btnLoading">click me....</button>
+</view>

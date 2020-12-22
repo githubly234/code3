@@ -1,0 +1,3 @@
+.container image {
+  width: 750rpx;
+}

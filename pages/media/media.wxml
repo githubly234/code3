@@ -1,0 +1,32 @@
+<view class="container">
+  <!-- 1.图片标签 image
+      - lazy-load:懒加载图片
+
+      - mode：图片的显示模式
+        a.aspectFit:保持图片宽高比，让图片的长边完全显示出来(图片缩小了)
+        b.aspectFill:保持图片宽高比，让图片的短边完全显示出来(有一部分看不见了)
+        c.widthFix：保持图片宽高比，高度会根据宽度自动计算 -->
+  <!-- <image mode="widthFix" src="/assets/images/zcs65a.jpg" lazy-load></image> -->
+  <!-- 2.audio标签
+    poster： 封面
+    name： 歌名
+    author：作者
+    src：音频资源
+    controls : 显示控制面板
+    loop : 循环播放 -->
+  <audio id="myAudio" poster="{{poster}}" name="{{name}}" author="{{author}}" src="/assets/media/当我想你的时候.mp3" controls loop></audio>
+  <button bindtap="audioPlay">播放</button>
+  <button bindtap="audioPause">暂停</button>
+  <button bindtap="audio14">快进</button>
+  <button bindtap="audioStart">开头</button>
+  <!-- 3.video标签
+     src ： 资源路径
+     danmu-list：弹幕列表 
+     enable-danmu  ： 开启弹幕
+     danmu-btn  ： 弹幕按钮
+     controls ： 显示控制面板
+   -->
+  <view class="section tc">
+    <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+  </view>
+</view>

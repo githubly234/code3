@@ -1,0 +1,7 @@
+<view  animation="{{animationData}}" style="margin:100rpx auto;background:red;height:100rpx;width:100rpx">sss</view>
+
+
+<button bindtap="scaleWidthOpcityBg">缩放宽度透明度背景色</button>
+<button bindtap="rotateAndScale">旋转和缩放同时进行</button>
+<button bindtap="rotateThenScale">先旋转再缩放</button>
+<button bindtap="rotateAndScaleThenTranslate">先旋转再平移</button>

@@ -1,0 +1,71 @@
+<!-- logs.wxml -->
+<view class="container log-list">
+  <!-- 1.小程序中事件绑定不需要加小括号
+    2.小程序中如果要传递参数，事件对象默认情况下会作为事件处理函数的第一个参数传递进来；如果要传递其他参数，可以使用data开头的属性
+    3.事件对象 event 包含的信息
+        {
+          "type":"tap",  //事件类型
+          "timeStamp":895,  //事件生成时的时间戳
+          //触发事件的元素
+          "target": {
+            "id": "tapTest",
+            "dataset":  {
+              "hi":"WeChat"
+            }
+          },
+          //绑定事件的元素
+          "currentTarget":  {
+            "id": "tapTest",
+            "dataset": {
+              "hi":"WeChat"
+            }
+          },
+          //额外的信息
+          "detail": {
+            "x":53,
+            "y":14
+          },
+          //当前停留在屏幕中的触摸点信息的数组
+          "touches":[{
+            "identifier":0,
+            "pageX":53,
+            "pageY":14,
+            "clientX":53,
+            "clientY":14
+          }],
+          //当前变化的触摸点信息的数组
+          "changedTouches":[{
+            "identifier":0,
+            "pageX":53,
+            "pageY":14,
+            "clientX":53,
+            "clientY":14
+          }]
+        } 
+    4.小程序中bindtap默认是有事件冒泡的，如果想阻止事件冒泡，那么用catchtap
+    5.小程序中双向绑定不好用，我们如果想要页面变了数据变，数据变了页面变，得手动去处理（单向数据流）
+         <input value="{{message}}" bindinput="inputHandle"></input>
+         
+         inputHandle:function(event){
+            this.setData({
+              message:event.detail.value
+            })
+          },
+    6.在小程序中通过js代码如果要访问data中的变量，通过this.data.xx来访问
+      在小程序中通过js代码修改data中的变量，this.setData({xx:"xx"})，千万不要直接改
+     -->
+  <button bindtap="buttonTapHandle" data-hello="你好" data-hello-world="hello world">点我触发事件</button>
+  <!-- 使用bindTap绑定事件，默认会有事件冒泡 -->
+  <view bindtap="outerHandler" style="width:200px;height:200px;background-color:red">
+    <view bindtap="innerHandler" style="width:100px;height:100px;background-color:blue"></view>
+  </view>
+  <!-- 使用catchtap阻止事件冒泡 -->
+  <view catchtap="outerHandler" style="width:200px;height:200px;background-color:red">
+    <view catchtap="innerHandler" style="width:100px;height:100px;background-color:blue"></view>
+  </view>
+
+  <!--单向数据流-->
+  <input value="{{message}}" bindinput="inputHandle"></input>
+  <text>{{message}}</text>
+  <button bindtap="modifyMessage">点我修改message</button>
+</view>

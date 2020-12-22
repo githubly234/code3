@@ -1,0 +1,28 @@
+<!-- 1.view标签：替换原来的div  块级元素 -->
+<view hover-class="hclass">点击我试试</view>
+<!-- 2.text类似于HTML中的p标签 -->
+<!-- text主要是为了可以很好的控制页面上的内容 -->
+<!-- text还支持换行 -->
+<text>1</text>
+<text>2</text>
+<!-- 长按选中文字，可对空格回车进行编码 -->
+<text selectable="{{true}}" decode="{{false}}">普&nbsp;通</text>
+<!-- 3.icon的type有success, success_no_circle, info, warn, waiting, cancel, download, search, clear -->
+<!-- type 用于定义图标类型，只能是规定范围的类型，除了这些内置图标，其他图标必须通过图片方式使用 -->
+<icon type="success_no_circle"></icon>
+<!-- size 用于指定图标大小 默认是23 单位是px -->
+<icon type="info" size="60"></icon>
+<!-- color 用于指定图标颜色 取值就是CSS颜色取值 -->
+<icon type="info" size="60" color="red"></icon>
+<!-- 4.显示一个进度条 -->
+<!-- show-info 是用来控制是否显示具体数值的的 -->
+<!-- 这边需要去掉container的align-items属性才能看到进度条 -->
+<progress percent="20" show-info />
+<progress percent="40" stroke-width="12" />
+<progress percent="60" color="pink" />
+<!-- active : 动画效果 -->
+<progress percent="80" active />
+ <!--5.rich-text从1.4.0开始可以使用，低版本需要兼容，类似于vue中的v-html -->
+<rich-text nodes="{{nodes}}"></rich-text>
+<rich-text nodes="{{nodes1}}"></rich-text>
+<rich-text nodes="{{nodes2}}"></rich-text>

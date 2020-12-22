@@ -1,0 +1,41 @@
+/*
+在小程序中为了做屏幕的兼容性处理，新增了一种单位叫 rpx
+rpx是将屏幕的宽度统一设置为750rpx,也就是不同的设备宽度都是750rpx
+
+当我们有了rpx单位之后，美工可以以iphone6为原型去设计页面，比如在iphone6下，有一个图片宽度占屏幕的一半
+img{
+  width:375rpx;
+  height:200rpx;
+}
+假如当前设备切换iphone5，此时也是占屏幕一半
+
+*/
+
+/*
+1.我们可以通过@import去引入外部样式，注意点是@import语句之后要跟分号
+2.小程序中不支持在wxss中使用本地图片（可以使用网络图片或者base64编码的图片）
+3.小程序不支持通配符选择器 * ，支持的选择器大概有id class element [属性] ~ + ::before  ::after :nth-child :fist-child ....
+4.在小程序中要使用less，我们可以借助vscode的easy less插件来完成
+  4.1 安装easy less插件
+  4.2 将下面的配置添加到vscode中
+    "less.compile": {        
+      "outExt":".wxss"
+    },
+  4.3 创建一个less文件，然后写样式，一保存就会自动帮我们编译wxss了
+*/
+@import "/common.wxss";
+.box{
+  width:375px;
+}
+.box2{
+    border: 1px solid red;
+    width: 600rpx;
+    height: 600rpx;
+    /*background-image可以指定网络图片，但是不可以指定本地图片*/
+    background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586254613140&di=33474e16f9fc5342f7a1e2be72f287f6&imgtype=0&src=http%3A%2F%2Fdmimg.5054399.com%2Fallimg%2Fpkm%2Fpk%2F22.jpg");
+    /* background-image: url(/assets/images/avatar.png) */
+}
+
+.box2 :first-child{
+  color:red
+}
